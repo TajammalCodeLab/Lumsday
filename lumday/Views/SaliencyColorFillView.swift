@@ -22,7 +22,7 @@ struct SaliencyColorFillView: View {
   @State private var dilateRadius: Double = 2
   @State private var featherRadius: Double = 3
   
-  @State private var cutOutMode: CutMode = .cutout
+  @State private var cutOutMode: CutMode = .outline
   var body: some View {
     NavigationStack {
       ZStack {
@@ -138,7 +138,7 @@ struct SaliencyColorFillView: View {
         .foregroundColor(.white)
         .padding()
         .background(Color.blue.opacity(0.8))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: 20))
       
       // Title + Subtitle
       Text("Add Your Object Image")
